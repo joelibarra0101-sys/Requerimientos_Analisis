@@ -1,0 +1,150 @@
+# INFORME DEL SISTEMA MESAPASS
+
+## 1. Introducción
+
+MesaPass es un sistema orientado a la gestión de servicios de alimentación empresarial, cuyo objetivo es automatizar el control de consumo de comidas de los empleados mediante el uso de tecnología QR. El sistema permite optimizar procesos, reducir errores y mejorar el control financiero dentro de las organizaciones.
+
+---
+
+## 2. Descripción General del Sistema
+
+El sistema funciona como una plataforma que conecta tres actores principales: empresas, empleados y restaurantes. A través de esta integración, se facilita la gestión de convenios, el registro de consumos y la generación de reportes en tiempo real.
+
+MesaPass reemplaza procesos manuales tradicionales por un sistema digital eficiente, permitiendo validar consumos de forma rápida mediante códigos QR únicos asignados a cada empleado.
+
+---
+
+## 3. Objetivo del Sistema
+
+* Automatizar el control de consumo de alimentos en empresas
+* Mejorar la eficiencia en la validación de servicios
+* Controlar presupuestos asignados a empleados
+* Generar reportes para la toma de decisiones
+
+---
+
+## 4. Funcionamiento del Sistema
+
+El flujo principal del sistema es el siguiente:
+
+1. La empresa registra a sus empleados
+2. El sistema genera un código QR único por empleado
+3. Se establecen convenios con restaurantes
+4. El empleado presenta su QR en el restaurante
+5. El restaurante valida el QR en el sistema
+6. Se registra el consumo automáticamente
+7. La empresa consulta reportes de consumo y gastos
+
+---
+
+## 5. Módulos del Sistema
+
+### 5.1 Gestión de Empresas
+
+Permite registrar y administrar la información de las empresas dentro del sistema.
+
+### 5.2 Gestión de Empleados
+
+Permite crear, consultar y administrar empleados, además de generar su código QR único.
+
+### 5.3 Gestión de Restaurantes
+
+Permite registrar los restaurantes que brindan el servicio de alimentación.
+
+### 5.4 Gestión de Convenios
+
+Permite definir acuerdos entre empresas y restaurantes, incluyendo tipo de pago, presupuesto y condiciones.
+
+### 5.5 Validación mediante QR
+
+Permite verificar la identidad del empleado y autorizar el consumo de manera rápida y segura.
+
+### 5.6 Registro de Consumos
+
+Permite almacenar cada transacción de comida realizada por los empleados.
+
+### 5.7 Reportes
+
+Permite visualizar información sobre consumos, gastos y facturación.
+
+---
+
+## 6. Beneficios del Sistema
+
+* Reducción de errores manuales
+* Mayor control del gasto empresarial
+* Agilidad en el proceso de consumo
+* Información en tiempo real
+* Escalabilidad para múltiples empresas
+
+---
+
+## 7. Conclusión
+
+MesaPass es una solución tecnológica que mejora significativamente la gestión de servicios de alimentación en empresas. Mediante el uso de códigos QR y una arquitectura moderna, permite optimizar procesos, garantizar control financiero y ofrecer una mejor experiencia tanto a empleados como a administradores.
+
+---
+1	Requisitos Funcionales (RF)
+•	RF01: Registrar empresas con RUC válido 
+•	RF02: Gestionar empleados asociados a una empresa 
+•	RF03: Generar código QR único para cada empleado 
+•	RF04: Registrar restaurantes en el sistema 
+•	RF05: Crear convenios entre empresa y restaurante 
+•	RF06: Definir condiciones del convenio (tipo de pago, presupuesto, descuentos) 
+•	RF07: Validar código QR del empleado en el punto de consumo 
+•	RF08: Registrar consumo de comida del empleado 
+•	RF09: Controlar el presupuesto disponible por empleado o convenio 
+•	RF10: Generar reportes de consumo y facturación 
+________________________________________
+2	⚙️ Requisitos No Funcionales (RNF)
+•	RNF01: El sistema debe responder en menos de 2 segundos 
+•	RNF02: Debe soportar múltiples empresas (multi-tenant) 
+•	RNF03: Debe garantizar integridad de datos en registros de consumo 
+•	RNF04: Debe ser escalable para múltiples usuarios concurrentes 
+•	RNF05: Debe estar disponible al menos el 99% del tiempo 
+•	RNF06: La interfaz debe ser intuitiva y fácil de usar 
+•	RNF07: Debe ser compatible con navegadores modernos 
+•	RNF08: Debe permitir despliegue en contenedores (Docker) 
+•	RNF09: Debe registrar logs de operaciones y errores 
+•	RNF10: Debe realizar respaldos periódicos de la base de datos 
+________________________________________
+Si quieres hacerlo aún mejor para tu entrega, el siguiente paso sería:
+👉 vincular estos RF con tus casos de uso (UC001, etc.) para que todo cuadre perfecto.
+casos de uso, sistema y de negocio dame todos
+Listo, te dejo casos de uso de negocio + casos de uso del sistema bien organizados y alineados a MesaPass 👇
+________________________________________
+3	🧩 1. Casos de Uso de Negocio (alto nivel)
+Actores: Empresa, Empleado, Restaurante
+•	CUN01: Gestionar servicio de alimentación empresarial 
+•	CUN02: Administrar empleados y asignación de beneficios 
+•	CUN03: Establecer convenios con restaurantes 
+•	CUN04: Proveer servicio de comidas a empleados 
+•	CUN05: Controlar consumo y presupuesto 
+•	CUN06: Generar reportes de consumo y facturación 
+________________________________________
+4	⚙️ 2. Casos de Uso del Sistema
+4.1	👨💼 Gestión interna
+•	UC001: Registrar empresa 
+•	UC002: Gestionar empleados 
+•	UC003: Generar QR de empleado 
+________________________________________
+4.2	🍽️ Restaurantes y convenios
+•	UC004: Registrar restaurante 
+•	UC005: Crear convenio empresa-restaurante 
+•	UC006: Configurar condiciones del convenio 
+________________________________________
+4.3	📱 Operación principal (core)
+•	UC007: Validar QR de empleado 
+•	UC008: Registrar consumo de comida 
+•	UC009: Verificar presupuesto disponible 
+________________________________________
+4.4	📊 Control y análisis
+•	UC010: Consultar consumo por empleado 
+•	UC011: Generar reportes de consumo 
+•	UC012: Generar reportes de facturación 
+________________________________________
+5	🎯 Relación (importante para tu proyecto)
+•	CUN03 (Convenios) → UC004, UC005, UC006 
+•	CUN04 (Servicio de comida) → UC007, UC008 
+•	CUN05 (Control consumo) → UC009, UC010 
+•	CUN06 (Reportes) → UC011, UC012
