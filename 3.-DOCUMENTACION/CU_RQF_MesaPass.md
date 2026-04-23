@@ -64,57 +64,149 @@ CU021\_ProcesarFacturacion
 
 
 
+**<i>~~Requisitos Funcionales:~~</i>**
 
 
-Gestión de actores del servicio
 
-RFN01: El sistema debe permitir el registro de empresas dentro del servicio de alimentación.
+**Gestión de actores**
 
-RFN02: El sistema debe permitir el registro de restaurantes afiliados al servicio.
+•	RFN01: El sistema debe permitir el registro de usuarios dentro de la plataforma.
 
-RFN03: El sistema debe permitir el registro de empleados beneficiarios por empresa.
+•	RFN02: El sistema debe permitir la autenticación de usuarios para el acceso seguro al sistema.
 
-RFN04: El sistema debe permitir la actualización y consulta de la información de empresas, restaurantes y empleados.
+•	RFN03: El sistema debe permitir la recuperación de acceso en caso de olvido de credenciales.
 
-🔷 Gestión de convenios
+•	RFN04: El sistema debe permitir la gestión de roles y permisos de los usuarios.
 
-RFN05: El sistema debe permitir la creación de convenios entre empresas y restaurantes.
 
-RFN06: El sistema debe permitir definir las condiciones del convenio, incluyendo modalidad de pago (prepago, postpago o mixto).
 
-RFN07: El sistema debe permitir establecer restricciones, beneficios o límites de consumo dentro del convenio.
+**Gestión de empresas (multi-tenant)**
 
-RFN08: El sistema debe validar la vigencia del convenio antes de autorizar cualquier consumo.
+•	RFN05: El sistema debe permitir el registro de empresas dentro del servicio.
 
-🔷 Identificación de empleados
+•	RFN06: El sistema debe permitir la gestión de la información de las empresas.
 
-RFN09: El sistema debe generar un código QR único para cada empleado registrado.
+•	RFN07: El sistema debe garantizar el aislamiento de la información entre empresas.
 
-RFN10: El sistema debe permitir la identificación del empleado mediante el código QR.
 
-RFN11: El sistema debe validar la autenticidad del código QR antes de permitir el acceso al servicio.
 
-🔷 Gestión del consumo
+**Gestión de empleados**
 
-RFN12: El sistema debe permitir al empleado acceder al servicio de alimentación en restaurantes afiliados.
+•	RFN08: El sistema debe permitir el registro de empleados asociados a una empresa.
 
-RFN13: El sistema debe permitir al restaurante registrar la solicitud de consumo del empleado.
+•	RFN09: El sistema debe permitir la gestión de la información de los empleados.
 
-RFN14: El sistema debe validar si el empleado está autorizado para consumir.
+•	RFN10: El sistema debe generar un código QR único para cada empleado.
 
-RFN15: El sistema debe verificar la existencia de un convenio vigente entre la empresa y el restaurante.
 
-RFN16: El sistema debe calcular el valor del consumo de acuerdo con las condiciones del convenio.
 
-RFN17: El sistema debe registrar el consumo realizado por el empleado.
+**Gestión de restaurantes**
 
-RFN18: El sistema debe evitar el registro duplicado de consumos para un mismo evento.
+•	RFN11: El sistema debe permitir el registro de restaurantes afiliados.
 
-🔷 Control y seguimiento
+•	RFN12: El sistema debe permitir la gestión de la información de los restaurantes.
 
-RFN19: El sistema debe permitir la consulta de los consumos realizados por parte de los actores autorizados.
 
-RFN20: El sistema debe generar reportes de consumo por empresa, restaurante y empleado.
 
-RFN21: El sistema debe consolidar la información necesaria para la gestión de pagos y facturación.
+**Gestión de convenios**
+
+•	RFN13: El sistema debe permitir la creación de convenios entre empresas y restaurantes.
+
+•	RFN14: El sistema debe validar la vigencia de los convenios antes de permitir el consumo.
+
+•	RFN15: El sistema debe permitir la gestión de las condiciones de los convenios.
+
+
+
+**Gestión de consumos**
+
+•	RFN16: El sistema debe permitir registrar el consumo de alimentos por parte de los empleados.
+
+•	RFN17: El sistema debe validar la autorización del consumo antes de su registro.
+
+•	RFN18: El sistema debe permitir la consulta del historial de consumos.
+
+•	RFN19: El sistema debe generar reportes de consumo.
+
+
+
+**Reportes y facturación**
+
+•	RFN20: El sistema debe generar reportes de facturación basados en los consumos registrados.
+
+
+
+**Sistema de invitaciones**
+
+•	RFN21: El sistema debe permitir el envío de invitaciones a usuarios.
+
+•	RFN22: El sistema debe permitir la aceptación de invitaciones para el acceso al sistema.
+
+
+
+**<i>~~REQUISITOS NO FUNCIONALES (RNF)~~</i>**
+
+
+
+Los siguientes requisitos definen las condiciones de calidad bajo las cuales debe operar el sistema MESAPASS.
+
+
+
+**Seguridad**
+
+•	RNF01: El sistema debe garantizar la autenticación segura de los usuarios.
+
+•	RNF02: El sistema debe proteger la información mediante mecanismos de control de acceso.
+
+•	RNF03: El sistema debe asegurar la confidencialidad de los datos personales.
+
+•	RNF04: El sistema debe prevenir accesos no autorizados a la información.
+
+
+
+**Rendimiento**
+
+•	RNF05: El sistema debe responder a las operaciones críticas en un tiempo menor a 2 segundos.
+
+•	RNF06: El sistema debe soportar múltiples usuarios concurrentes sin degradación significativa del servicio.
+
+
+
+**Disponibilidad**
+
+•	RNF07: El sistema debe estar disponible durante los horarios operativos del servicio.
+
+•	RNF08: El sistema debe minimizar tiempos de inactividad.
+
+
+
+**Usabilidad**
+
+•	RNF09: El sistema debe ser fácil de usar para todos los actores del servicio.
+
+•	RNF10: El sistema debe permitir realizar las operaciones en el menor número de pasos posible.
+
+
+
+**Integridad de datos**
+
+•	RNF11: El sistema debe garantizar la consistencia de la información registrada.
+
+•	RNF12: El sistema debe evitar la duplicidad de registros de consumo.
+
+
+
+**Escalabilidad**
+
+•	RNF13: El sistema debe permitir el crecimiento en número de empresas, empleados y restaurantes sin afectar su desempeño.
+
+•	Trazabilidad
+
+•	RNF14: El sistema debe registrar las operaciones realizadas para fines de auditoría y control.
+
+
+
+
+
+
 
